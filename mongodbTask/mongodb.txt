@@ -1,0 +1,24 @@
+MongoDB Task Solutions
+
+1  db.movies.insert({title: "Fight Club",writer: "Chuck Palahnuik", year: 1999,actors:["Brad Pitt","Edward Norton"]})
+
+2 db.movies.updateMany({},{$set: {writer:"Quentin Tarantin"}})
+
+3   db.movies.find({actors:"Brad Pitt"})
+
+4  db.movies.updateMany({},{$set:{franchise:"The Hobbit"}})
+
+5   db.movies.find({year:{$gt: 1989},year:{$lt: 2000}})
+
+6  db.movies.find({year:{$lt: 2000}})
+   db.movies.find({year:{$gt:2010}})
+
+7 db.movies.find({},{"writer":0}).count()
+
+8  db.movies.updateOne({title:"Pulp Fiction"},{$set: {actors:["Samuel L. Jackson"]}})
+
+9   db.movies.find({synopsis:{$regex:"Gandalf"}})
+
+10  db.movies.find().sort({year:-1})
+
+11   db.movies.find().sort({year:-1}).limit(2)
